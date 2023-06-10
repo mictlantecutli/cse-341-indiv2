@@ -13,3 +13,23 @@ GET http://localhost:8080/contacts/6483ba02bc5fa7ff5b508f98
 ###
 
 GET http://localhost:8080/contacts/6483ba02bc5fa7ff5b508f99
+
+
+
+//requests in RENDER DEPLOY
+###
+GET https://lesson2-individual-moises.onrender.com/contacts
+
+###
+
+GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f97
+
+###
+
+GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f98
+
+###
+
+GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
+
+
