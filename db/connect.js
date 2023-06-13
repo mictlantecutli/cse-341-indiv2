@@ -3,7 +3,7 @@ dotenv.config();
 
 const {MongoClient} = require('mongodb');
 
-//const mongoURL = "mongodb+srv://testcse_341class:moicanoTlacatl@cluster0.hjruwih.mongodb.net/?retryWrites=true&w=majority";
+
 
 let _db;
 
