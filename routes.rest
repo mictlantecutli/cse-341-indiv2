@@ -18,46 +18,46 @@ GET http://localhost:8080/methodsLesson/6483ba02bc5fa7ff5b508f99
 
 //requests in RENDER DEPLOY
 ###
-GET https://lesson2-individual-moises.onrender.com/contacts
+GET https://lesson3-indiv.onrender.com/methodsLesson
 
 ###
 
-GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f97
+GET https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f97
 
 ###
 
-GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f98
+GET https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f99
 
 ###
 
-GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
+GET https://lesson3-indiv.onrender.com/methodsLesson/6489560d7f7070a75f5ba1b9
 
 ###
-POST http://localhost:8080/methodsLesson 
+POST https://lesson3-indiv.onrender.com/methodsLesson 
 Content-Type: application/json
 
 {
-  "firstName": "Betha",
-  "lastName": "Ramirez",
-  "email": "bertini@hotmail.com",
-  "favoriteColor": "pink",
-  "birthday": "27/02/80"
+  "firstName": "Anastasio",
+  "lastName": "Bustamante",
+  "email": "bustamAnast@yahoo.es",
+  "favoriteColor": "black",
+  "birthday": "08/07/76"
 }
 ###
 
 
-PUT  http://localhost:8080/methodsLesson/648973ed696e616118b1aa86 
+PUT  https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f99 
 Content-Type: application/json
 
 {
 
-  "firstName": "Candido",
-  "lastName": "Alvarado",
-  "email": "escalaT@gmail.com",
-  "favoriteColor": "red",
-  "birthday": "11/06/99"
+  "firstName": "Alvaro",
+  "lastName": "Obregon",
+  "email": "obreAlva09@gmail.com",
+  "favoriteColor": "green",
+  "birthday": "04/03/97"
 }
 
 ###
-DELETE http://localhost:8080/methodsLesson/648973ed696e616118b1aa86 
+DELETE https://lesson3-indiv.onrender.com/methodsLesson/6489560d7f7070a75f5ba1b9  
 ###
