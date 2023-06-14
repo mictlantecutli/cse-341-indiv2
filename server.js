@@ -1,4 +1,4 @@
-const teacherRoute = require('./routes/index');
+const contactsMethods = require("./routes/index")
 const express = require('express');
 const app = express();
 const parser = require('body-parser');
@@ -13,7 +13,14 @@ app.use(cors());
 
 app.use(parser.json());
 
-app.use('/', teacherRoute);
+
+app.use((req, res, next)=>{
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+
+})
+
+app.use('/', contactsMethods);
 
 
 mongodb.initDb((err

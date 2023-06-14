@@ -1,14 +1,12 @@
 const router = require('express').Router();
+const methodsContacts = require('./methods');
 
-const teacherUser = require('../controllers/index.js');
+// router.use('/methodsLesson', methodsContacts);
 
-
-router.get('/contacts', teacherUser.getData);
-
-router.get('/contacts/:id', teacherUser.getData_single);
+router.use('/methodsLesson', methodsContacts);
 
 
 
-module.exports = router;
 
 
+module.exports = router

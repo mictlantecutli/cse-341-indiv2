@@ -1,18 +1,18 @@
 //local requests
 ###
-GET http://localhost:8080/contacts 
+GET http://localhost:8080/methodsLesson 
 
 ###
 
-GET http://localhost:8080/contacts/6483ba02bc5fa7ff5b508f97
+GET http://localhost:8080/methodsLesson/6483ba02bc5fa7ff5b508f97
 
 ####
 
-GET http://localhost:8080/contacts/6483ba02bc5fa7ff5b508f98
+GET http://localhost:8080/methodsLesson/6483ba02bc5fa7ff5b508f98
 
 ###
 
-GET http://localhost:8080/contacts/6483ba02bc5fa7ff5b508f99
+GET http://localhost:8080/methodsLesson/6483ba02bc5fa7ff5b508f99
 
 
 
@@ -32,4 +32,32 @@ GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b50
 
 GET https://lesson2-individual-moises.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
 
+###
+POST http://localhost:8080/methodsLesson 
+Content-Type: application/json
 
+{
+  "firstName": "Betha",
+  "lastName": "Ramirez",
+  "email": "bertini@hotmail.com",
+  "favoriteColor": "pink",
+  "birthday": "27/02/80"
+}
+###
+
+
+PUT  http://localhost:8080/methodsLesson/648973ed696e616118b1aa86 
+Content-Type: application/json
+
+{
+
+  "firstName": "Candido",
+  "lastName": "Alvarado",
+  "email": "escalaT@gmail.com",
+  "favoriteColor": "red",
+  "birthday": "11/06/99"
+}
+
+###
+DELETE http://localhost:8080/methodsLesson/648973ed696e616118b1aa86 
+###
