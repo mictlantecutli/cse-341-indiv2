@@ -1,12 +1,12 @@
-const router = require('express').Router();
+const routes = require('express').Router();
 const methodsContacts = require('./methods');
 
 // router.use('/methodsLesson', methodsContacts);
 
-router.use('/methodsLesson', methodsContacts);
+routes.use('/', require('./app'));
+
+routes.use('/methodsLesson', methodsContacts);
 
 
 
-
-
-module.exports = router
+module.exports = routes

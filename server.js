@@ -13,14 +13,20 @@ app.use(cors());
 
 app.use(parser.json());
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
+
 
 app.use((req, res, next)=>{
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
-
+  
 })
 
-app.use('/', contactsMethods);
+  app.use('/', contactsMethods);
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
 
 
 mongodb.initDb((err

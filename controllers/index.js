@@ -23,7 +23,7 @@ const newContact = async (req, res, next) => {
   const contact_new = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      email: req.body.lastName,
+      email: req.body.email,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday
   };
@@ -43,7 +43,7 @@ const update = async (req, res, next) => {
   const contact_update = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      email: req.body.lastName,
+      email: req.body.email,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday
   };
