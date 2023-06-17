@@ -5,7 +5,7 @@ const methodsContacts = require('./methods');
 
 routes.use('/', require('./app'));
 
-routes.use('/methodsLesson', methodsContacts);
+routes.use('/contacts', methodsContacts);
 
 
 
