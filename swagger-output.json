@@ -5,10 +5,10 @@
     "description": "This API is about my contacts",
     "version": "1.0.0"
   },
-  "host": "https://lesson4-indiv.onrender.com",
+  "host": "lesson4-indiv.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
