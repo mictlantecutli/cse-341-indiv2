@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/methodsLesson/": {
+    "/contacts/": {
       "get": {
         "description": "",
         "produces": [
@@ -69,7 +69,7 @@
         }
       }
     },
-    "/methodsLesson/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "produces": [
