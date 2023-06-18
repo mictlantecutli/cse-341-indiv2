@@ -1,23 +1,23 @@
 //local requests
 ###
-GET http://localhost:8081/methodsLesson 
+GET http://localhost:8081/contacts 
 
 ###
 
-GET http://localhost:8081/methodsLesson/6483ba02bc5fa7ff5b508f97
+GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f97
 
 ####
 
-GET http://localhost:8081/methodsLesson/6483ba02bc5fa7ff5b508f98
+GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f98
 
 ###
 
-GET http://localhost:8081/methodsLesson/6483ba02bc5fa7ff5b508f99
+GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f99
 
 
 //local POST, PUT, DELETE
 ###
-POST http://localhost:8081/methodsLesson 
+POST http://localhost:8081/contacts 
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8081/methodsLesson/6483ba02bc5fa7ff5b508f99
+PUT http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f99
 Content-Type: application/json
 
 {
@@ -41,7 +41,7 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:8081/methodsLesson/6489560d7f7070a75f5ba1b9 
+DELETE http://localhost:8081/contacts/6489560d7f7070a75f5ba1b9 
 
 ###
 
@@ -49,22 +49,22 @@ DELETE http://localhost:8081/methodsLesson/6489560d7f7070a75f5ba1b9
 
 /////////////requests in RENDER DEPLOY//////////////////
 ###
-GET https://lesson3-indiv.onrender.com/methodsLesson
+GET https://lesson3-indiv.onrender.com/contacts
 
 ###
 
-GET https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f97
+GET https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f97
 
 ###
 
-GET https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f99
+GET https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
 
 ###
 
-GET https://lesson3-indiv.onrender.com/methodsLesson/6489560d7f7070a75f5ba1b9
+GET https://lesson3-indiv.onrender.com/contacts/6489560d7f7070a75f5ba1b9
 
 ###
-POST https://lesson3-indiv.onrender.com/methodsLesson 
+POST https://lesson3-indiv.onrender.com/contacts 
 Content-Type: application/json
 
 {
@@ -77,7 +77,7 @@ Content-Type: application/json
 ###
 
 
-PUT  https://lesson3-indiv.onrender.com/methodsLesson/6483ba02bc5fa7ff5b508f99 
+PUT  https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99 
 Content-Type: application/json
 
 {
@@ -90,7 +90,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE https://lesson3-indiv.onrender.com/methodsLesson/6489560d7f7070a75f5ba1b9  
+DELETE https://lesson3-indiv.onrender.com/contacts/6489560d7f7070a75f5ba1b9  
 ###
 
 ///////////////ASSIGNMENT 04 PERSONAL/////////////////////////////
