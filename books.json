@@ -3,7 +3,18 @@
   "author": "Cervantes Saavedra, M.",
   "genre": "Nobel",
   "pages": "1360",
-  "image": "23/02/80",
+  "image": "https://raw.githubusercontent.com/mictlantecutli/cse-341-indiv2/lesson5_indiv/imagesBooks/quixote_image.webp",
   "publisher": "Real Academia Española",
   "yearEdition": "2004"
-}]
+},
+
+{
+  "titleBook": "The rhetoric of Plato’s Republic : democracy and the philosophical problem of persuasion",
+  "author": "Kastely, J. L.",
+  "genre": "Nobel",
+  "pages": "1360",
+  "image": "https://raw.githubusercontent.com/mictlantecutli/cse-341-indiv2/lesson5_indiv/imagesBooks/quixote_image.webp",
+  "publisher": "Real Academia Española",
+  "yearEdition": "2004"
+}
+]
