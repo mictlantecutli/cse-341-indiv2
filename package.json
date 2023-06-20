@@ -1,7 +1,7 @@
 {
-  "name": "lesson_dos",
+  "name": "lesson_five",
   "version": "1.0.0",
-  "description": "",
+  "description": "This lesson is with a new database",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
