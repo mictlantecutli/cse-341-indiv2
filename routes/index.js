@@ -1,11 +1,11 @@
 const routes = require('express').Router();
-const methodsContacts = require('./methods');
+const methodsBooks = require('./methods');
 
 // router.use('/methodsLesson', methodsContacts);
 
 routes.use('/', require('./app'));
 
-routes.use('/contacts', methodsContacts);
+routes.use('/books', methodsBooks);
 
 
 

@@ -1,4 +1,4 @@
-const contactsMethods = require("./routes/index")
+const bookMethods = require("./routes/index")
 const express = require('express');
 const app = express();
 const parser = require('body-parser');
@@ -23,7 +23,7 @@ app.use((req, res, next)=>{
   
 })
 
-  app.use('/', contactsMethods);
+  app.use('/', bookMethods);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 

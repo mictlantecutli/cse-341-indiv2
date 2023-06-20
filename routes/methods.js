@@ -1,16 +1,16 @@
 const router = require('express').Router();
 
-const teacherUser = require('../controllers/index.js');
+const books = require('../controllers/index.js');
 
-router.get('/', teacherUser.getData);
+router.get('/', books.getData);
 
-router.get('/:id', teacherUser.getData_single);
+router.get('/:id', books.getData_single);
 
-router.post('/', teacherUser.newContact);
+router.post('/', books.newBook);
 
-router.put('/:id', teacherUser.update);
+router.put('/:id', books.updateBook);
 
-router.delete('/:id', teacherUser.deleteContact);
+router.delete('/:id', books.deleteBook);
 
 
 

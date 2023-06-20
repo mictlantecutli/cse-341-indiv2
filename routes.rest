@@ -1,35 +1,37 @@
 //local requests
 ###
-GET http://localhost:8081/contacts 
+GET http://localhost:8081/books 
 
 ###
 
-GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f97
+GET http://localhost:8081/books/649206adbd9ba34a898507b6
 
 ####
 
-GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f98
+GET http://localhost:8081/books/649206adbd9ba34a898507b7
 
 ###
 
-GET http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f99
+GET http://localhost:8081/books/649206adbd9ba34a898507b4
 
 
 //local POST, PUT, DELETE
 ###
-POST http://localhost:8081/contacts 
+POST http://localhost:8081/books 
 Content-Type: application/json
 
 {
-  "firstName": "Anastasio",
-  "lastName": "Bustamante",
-  "email": "bustamAnast@yahoo.es",
-  "favoriteColor": "black",
-  "birthday": "08/07/76"
+  "titleBook": "The Lord of the Rings Tarot Deck and Guide",
+  "author": "Auger, Emily E.",
+  "genre": "Reviews",
+  "pages": "78",
+  "image": "08/07/76",
+  "publisher": "Mythopoeic Society",
+  "yearEdition": "2023"
 }
 
 ###
-PUT http://localhost:8081/contacts/6483ba02bc5fa7ff5b508f99
+PUT http://localhost:8081/books/6483ba02bc5fa7ff5b508f99
 Content-Type: application/json
 
 {
@@ -41,7 +43,7 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:8081/contacts/6489560d7f7070a75f5ba1b9 
+DELETE http://localhost:8081/books/649206adbd9ba34a898507b6
 
 ###
 
