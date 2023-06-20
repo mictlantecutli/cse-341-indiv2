@@ -25,7 +25,7 @@ Content-Type: application/json
   "author": "Auger, Emily E.",
   "genre": "Reviews",
   "pages": "78",
-  "image": "08/07/76",
+  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_Lrings.jpg",
   "publisher": "Mythopoeic Society",
   "yearEdition": "2023"
 }
