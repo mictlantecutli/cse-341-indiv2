@@ -91,9 +91,10 @@ Content-Type: application/json
 DELETE https://lesson05-indiv.onrender.com/books/64939a03aebdb99489ae1396 
 ###
 
-///////////////ASSIGNMENT 05 PERSONAL API.DOCS/////////////////////////////
+///////////////ASSIGNMENT 05 PERSONAL API.DOCS for BOOKS/////////////////////////////
 ###
-https://lesson4-indiv.onrender.com/api-docs/
+
+https://lesson05-indiv.onrender.com/api-docs/
 
 ###
 
