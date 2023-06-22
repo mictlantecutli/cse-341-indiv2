@@ -5,7 +5,7 @@
     "description": "This API is a collection of books",
     "version": "1.0.0"
   },
-  "host": "lesson4-indiv.onrender.com",
+  "host": "lesson05-indiv.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
