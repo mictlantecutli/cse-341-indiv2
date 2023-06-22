@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API CONTACTS",
-    "description": "This API is about my contacts",
+    "title": "My API Books",
+    "description": "This API is a collection of books",
     "version": "1.0.0"
   },
   "host": "lesson4-indiv.onrender.com",
@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/books/": {
       "get": {
         "description": "",
         "produces": [
@@ -40,19 +40,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "titleBook": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "genre": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "pages": {
                   "example": "any"
                 },
-                "birthday": {
+                "image": {
+                  "example": "any"
+                },
+                "publisher": {
+                  "example": "any"
+                },
+                "yearEdition": {
                   "example": "any"
                 }
               }
@@ -69,7 +75,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/books/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -104,19 +110,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "titleBook": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "genre": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "pages": {
                   "example": "any"
                 },
-                "birthday": {
+                "image": {
+                  "example": "any"
+                },
+                "publisher": {
+                  "example": "any"
+                },
+                "yearEdition": {
                   "example": "any"
                 }
               }

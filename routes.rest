@@ -49,30 +49,27 @@ DELETE http://localhost:8081/books/64920f44a449213855eedd3c
 
 /////////////requests in RENDER DEPLOY//////////////////
 ###
-GET https://lesson3-indiv.onrender.com/contacts
+GET https://lesson05-indiv.onrender.com/books
 
 ###
 
-GET https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f97
+GET https://lesson05-indiv.onrender.com/books/649206adbd9ba34a898507b7
 
 ###
 
-GET https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
 
 ###
-
-GET https://lesson3-indiv.onrender.com/contacts/6489560d7f7070a75f5ba1b9
-
-###
-POST https://lesson3-indiv.onrender.com/contacts 
+POST https://lesson05-indiv.onrender.com/books/64939cccf8df9ae256bc3412
 Content-Type: application/json
 
 {
-  "firstName": "Anastasio",
-  "lastName": "Bustamante",
-  "email": "bustamAnast@yahoo.es",
-  "favoriteColor": "black",
-  "birthday": "08/07/76"
+  "titleBook": "The Lord of the Rings Tarot Deck and Guide",
+  "author": "Auger, Emily E.",
+  "genre": "Reviews",
+  "pages": "78",
+  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_Lrings.jpg",
+  "publisher": "Mythopoeic Society",
+  "yearEdition": "2023"
 }
 ###
 
@@ -81,19 +78,20 @@ PUT  https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99
 Content-Type: application/json
 
 {
-
-  "firstName": "Alvaro",
-  "lastName": "Obregon",
-  "email": "obreAlva09@gmail.com",
-  "favoriteColor": "green",
-  "birthday": "04/03/97"
+  "titleBook": "*********",
+  "author": "***************",
+  "genre": "*****",
+  "pages": "****",
+  "image": "********",
+  "publisher": "*******",
+  "yearEdition": "*******"
 }
 
 ###
-DELETE https://lesson3-indiv.onrender.com/contacts/6489560d7f7070a75f5ba1b9  
+DELETE https://lesson05-indiv.onrender.com/books/64939a03aebdb99489ae1396 
 ###
 
-///////////////ASSIGNMENT 04 PERSONAL/////////////////////////////
+///////////////ASSIGNMENT 05 PERSONAL API.DOCS/////////////////////////////
 ###
 https://lesson4-indiv.onrender.com/api-docs/
 
