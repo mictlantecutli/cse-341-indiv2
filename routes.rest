@@ -2,18 +2,13 @@
 ###
 GET http://localhost:8081/books 
 
+
+//The following links are for looking single book by ID
 ###
 
 GET http://localhost:8081/books/649206adbd9ba34a898507b6
 
 ####
-
-GET http://localhost:8081/books/649206adbd9ba34a898507b7
-
-###
-
-GET http://localhost:8081/books/649206adbd9ba34a898507b4
-
 
 //local POST, PUT, DELETE
 ###
@@ -30,20 +25,23 @@ Content-Type: application/json
   "yearEdition": "2023"
 }
 
+//HERE I DID ONE CHANGES IN THE NUMBER OF PAGES
 ###
-PUT http://localhost:8081/books/6483ba02bc5fa7ff5b508f99
+PUT http://localhost:8081/books/64920f44a449213855eedd3c
 Content-Type: application/json
 
 {
-  "firstName": "Alvaro",
-  "lastName": "Obregon",
-  "email": "obreAlva09@gmail.com",
-  "favoriteColor": "green",
-  "birthday": "04/03/97"
+  "titleBook": "*********",
+  "author": "***************",
+  "genre": "*****",
+  "pages": "****",
+  "image": "********",
+  "publisher": "*******",
+  "yearEdition": "*******"
 }
 ###
 
-DELETE http://localhost:8081/books/649206adbd9ba34a898507b6
+DELETE http://localhost:8081/books/64920f44a449213855eedd3c
 
 ###
 
