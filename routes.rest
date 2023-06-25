@@ -27,17 +27,17 @@ Content-Type: application/json
 
 //HERE I DID ONE CHANGES IN THE NUMBER OF PAGES
 ###
-PUT http://localhost:8081/books/64920f44a449213855eedd3c
+PUT http://localhost:8081/books/649798aa545473ee1e8c4d14
 Content-Type: application/json
 
 {
-  "titleBook": "*********",
-  "author": "***************",
-  "genre": "*****",
-  "pages": "***",
-  "image": "********",
-  "publisher": "*******",
-  "yearEdition": "*******"
+  "titleBook": "SADASD",
+  "author": "",
+  "genre": "",
+  "pages": "",
+  "image": "",
+  "publisher": "",
+  "yearEdition": ""
 }
 ###
 
