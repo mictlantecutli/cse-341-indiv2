@@ -6,7 +6,7 @@ GET http://localhost:8081/books
 //The following links are for looking single book by ID
 ###
 
-GET http://localhost:8081/books/649206adbd9ba34a898507b6
+GET http://localhost:8081/books/649206adbd9ba34a898507b4
 
 ####
 
@@ -18,7 +18,7 @@ Content-Type: application/json
 {
   "titleBook": "The Lord of the Rings Tarot Deck and Guide",
   "author": "Auger, Emily E.",
-  "genre": "Reviews",
+  "genre": "Fantasy",
   "pages": "78",
   "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_Lrings.jpg",
   "publisher": "Mythopoeic Society",
@@ -34,14 +34,14 @@ Content-Type: application/json
   "titleBook": "*********",
   "author": "***************",
   "genre": "*****",
-  "pages": "****",
+  "pages": "***",
   "image": "********",
   "publisher": "*******",
   "yearEdition": "*******"
 }
 ###
 
-DELETE http://localhost:8081/books/64920f44a449213855eedd3c
+DELETE http://localhost:8081/books/649754eaccb2a01f0829d55a
 
 ###
 

@@ -2,20 +2,42 @@ const { response } = require('express');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getData = async (req, res, next) => {
-  const result = await mongodb.getDb().db('project02').collection('books').find();
+const getData = async (req, res) => {
+  const result =  await mongodb.getDb().db('project02').collection('books').find(); 
   result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists); 
-  });
+   //const errorConst = ()=> undefined 
+    try{
+      //res.errorConst();
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    }catch(err){
+      res.status(400).json(err.message);
+
+    }
+
+   
+
+});
+   
 };
+
 
 const getData_single = async (req, res, next) => {
   const bookID = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db('project02').collection('books').find({_id:bookID});
   result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]); 
+    //This const is to test the handle error, and it works very well
+    //const errorConst = ()=> undefined 
+    try{
+      
+      //res.errorConst();
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    }catch(err){
+      res.status(400).json(err.message);
+
+    }
+
   });
 };
 

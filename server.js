@@ -7,6 +7,7 @@ const mongodb = require('./db/connect');
 var cors = require('cors');
 
 
+
 app.use(cors());
 
 //const port = 8000;
@@ -26,7 +27,9 @@ app.use((req, res, next)=>{
   app.use('/', bookMethods);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
 
 
 mongodb.initDb((err
