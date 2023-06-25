@@ -90,7 +90,7 @@ const deleteBook = async (req, res, next) => {
   
   const result = await mongodb.getDb().db('project02').collection('books').deleteOne({_id:bookID}, true);
   if (result.deletedCount > 0){
-    res.status(204).send();
+    res.status(200).send();
   }else{
 
     res.status(500).json(result.console.error('was no removed the contact'));
