@@ -73,10 +73,10 @@ const updateBook = async (req, res, next) => {
     publisher: req.body.publisher,
     yearEdition: req.body.yearEdition
 }; 
-  const errorConst = ()=> undefined
+  //const errorConst = ()=> undefined
   const result = await mongodb.getDb().db('project02').collection('books').replaceOne({_id:userID}, book_update);
   if (result.modifiedCount > 0){
-    res.errorConst();
+    //res.errorConst();
     res.status(204).send();
   }else{
 
