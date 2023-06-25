@@ -49,17 +49,17 @@ DELETE http://localhost:8081/books/649754eaccb2a01f0829d55a
 
 /////////////requests in RENDER DEPLOY//////////////////
 ###
-GET https://lesson05-indiv.onrender.com/books
+GET https://lesson06-indiv.onrender.com/books
 
 ###
 
-GET https://lesson05-indiv.onrender.com/books/649206adbd9ba34a898507b7
+GET https://lesson06-indiv.onrender.com/books/649206adbd9ba34a898507b7
 
 ###
 
 
 ###
-POST https://lesson05-indiv.onrender.com/books/64939cccf8df9ae256bc3412
+POST https://lesson06-indiv.onrender.com/books/64939cccf8df9ae256bc3412
 Content-Type: application/json
 
 {
@@ -74,7 +74,7 @@ Content-Type: application/json
 ###
 
 
-PUT  https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99 
+PUT  https://lesson06-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99 
 Content-Type: application/json
 
 {
@@ -88,13 +88,13 @@ Content-Type: application/json
 }
 
 ###
-DELETE https://lesson05-indiv.onrender.com/books/64939a03aebdb99489ae1396 
+DELETE https://lesson06-indiv.onrender.com/books/64939a03aebdb99489ae1396 
 ###
 
-///////////////ASSIGNMENT 05 PERSONAL API.DOCS for BOOKS/////////////////////////////
+///////////////ASSIGNMENT 06 PERSONAL API.DOCS for BOOKS/////////////////////////////
 ###
 
-https://lesson05-indiv.onrender.com/api-docs/
+https://lesson06-indiv.onrender.com/api-docs/
 
 ###
 
