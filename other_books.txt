@@ -1,0 +1,28 @@
+/*
+{
+  "titleBook": "The rhetoric of Plato’s Republic : democracy and the philosophical problem of persuasion",
+  "author": "Kastely, J. L.",
+  "genre": "Rhetoric",
+  "pages": "280",
+  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_platos.jpeg",
+  "publisher": "The University of Chicago Press",
+  "yearEdition": "2015"
+},
+{
+  "titleBook": "The rhetoric of Plato’s Republic : democracy and the philosophical problem of persuasion",
+  "author": "Kastely, J. L.",
+  "genre": "Rhetoric",
+  "pages": "280",
+  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_platos.jpeg",
+  "publisher": "The University of Chicago Press",
+  "yearEdition": "2015"
+}, 
+{
+  "titleBook": "Bodies and books : reading and the fantasy of communion in nineteenth-century America / Gillian Silverman",
+  "author": "Silverman, G. D. ",
+  "genre": "History and Critisism",
+  "pages": "256",
+  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_03.jpeg",
+  "publisher": "University of Pennsylvania Press,",
+  "yearEdition": "2012"
+}*/

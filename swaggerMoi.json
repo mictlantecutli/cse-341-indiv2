@@ -1,0 +1,317 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "save the prefer books of users",
+    "version": "1.0.0",
+    "title": "Users and Prefer Books API",
+    "contact": {
+      "email": "moisesparra82@hotmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "user",
+      "description": "All about users"
+    },
+    {
+      "name": "favoriteBook",
+      "description": "All about favorite books"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/":{
+      "get": {
+        "tags": [
+          "id"
+        ],
+        "summary": "Get All the books in database",
+        "operationId": "getBookById",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "invalid title"
+          }
+        }
+      }
+    },
+    "/newStudent": {
+      "put": {
+        "tags": [
+          "Single favoriteBook"
+        ],
+        "summary": "Get single book of data base",
+        "operationId": "getOneBook",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {"name": "body",
+          "in": "body"
+      }
+        ],
+
+        "properties": {
+          "firstName": {
+            "type": "string"
+            
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "favoriteBooks": {
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        
+      },
+        
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Student"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/:": {
+      "get": {
+        "tags": [
+          "Single favoriteBook"
+        ],
+        "summary": "Get single book of data base",
+        "operationId": "getOneBook",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/favoriteBook"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Allstudents": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get all students",
+        "operationId": "getStudents",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      }
+
+
+      
+      
+      ,
+      
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Create a new users",
+        "operationId": "createUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The user name",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/user/{idUser}": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get User",
+        "operationId": "getUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "idUser",
+            "in": "path",
+            "description": "id of the user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully Returned"
+          },
+          "401": {
+            "description": "Id does not exist"
+          }
+        }
+      }
+    }
+  },
+  
+  
+  "definitions": {
+    "Student": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "lastName", 
+        "email",
+        "phoneNumber",
+        "favoriteBooks",
+        "birthDate",
+        "location"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+          
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "favoriteBooks": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        }
+      }
+    },
+    "Credentials": {
+      "type": "object",
+      "required": [
+        "id",
+        "password",
+        "username"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "favoriteBook": {
+      "type": "object",
+      "required": [
+        "author",
+        "genre",
+        "id",
+        "image",
+        "pages",
+        "publisher",
+        "titleBook",
+        "yearEdition"
+      ],
+      "properties": {
+        
+        "titleBook": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "genre": {
+          "type": "string"
+        },
+        "pages": {
+          "type": "integer"
+        },
+        "image": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "yearEdition": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

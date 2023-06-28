@@ -1,12 +1,8 @@
-const routes = require('express').Router();
-const methodsBooks = require('./methods');
+const express = require('express');
+const router = express.Router();
 
-// router.use('/methodsLesson', methodsContacts);
+router.use('/', require('./swaggerRoutes'));
+router.use('/', require('./students'));
+router.use('/', require('./books'));
 
-routes.use('/', require('./app'));
-
-routes.use('/books', methodsBooks);
-
-
-
-module.exports = routes
+module.exports = router;

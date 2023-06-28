@@ -1,14 +1,5 @@
-//local requests
-###
-GET http://localhost:8081/books 
 
 
-//The following links are for looking single book by ID
-###
-
-GET http://localhost:8081/books/649206adbd9ba34a898507b6
-
-####
 
 //local POST, PUT, DELETE
 ###
@@ -96,7 +87,88 @@ DELETE https://lesson05-indiv.onrender.com/books/64939a03aebdb99489ae1396
 
 https://lesson05-indiv.onrender.com/api-docs/
 
+/////////////////ASSIGNMENT 05 AGAIN/////////////////
+###POST METHOD STUDENT###############
+POST http://localhost:8080/newStudent 
+content-type: application/json
+
+{
+  "firstName": "*****",
+  "lastName": "*******", 
+  "email": "oisd@ssdfsada",
+  "phoneNumber": "7714436999413", 
+  "favoriteBooks": "******",
+  "birthDate": "08/11/1986",
+  "location": "******" 
+}
+
+
+
+############################
+####UPDATE STUDENT################
+PUT http://localhost:8080/649c8fa1bba38628c0bd7ee9 
+content-type: application/json
+
+{
+  "firstName": "changes2",
+  "lastName": "changes2", 
+  "email": "oisd@s*****",
+  "phoneNumber": "7772343242", 
+  "favoriteBooks": "changes2",
+  "birthDate": "08/11/1986",
+  "location": "changes2" 
+}
+
 ###
+###GET METHOD ALL THE STUDENTS
+GET http://localhost:8080/Allstudents 
+
+
+
+################################
+###DELETE STUDENTS BY ID########
+################################
+
+//////////////
+
+##############################
+###GET STUDENTS BY ID########
+GET http://localhost:8080/649befbe840d44355155586d 
+
+###########################################
+###########ROUTES FOR BOOK DATABASE######
+#########################################
+POST http://localhost:8080/newBook
+content-type: application/json
+
+{
+  "titleBook": "******",
+  "author": "******",
+  "genre": "*****"
+}
+
+#####UPDATE METHOD#####
+#########################
+PUT http://localhost:8080/changes/649c9030bba38628c0bd7eee
+content-type: application/json
+
+{
+  "titleBook": "update",
+  "author": "update",
+  "genre": "update"
+}
+######
+
+###GET ALL THE FAVORITE BOOKS
+GET http://localhost:8080/
+###
+
+###
+###GET books BY ID 
+GET http://localhost:8080/looking/649c8ee81a5a121b8817e77e
+#####
+
+
 
 
 

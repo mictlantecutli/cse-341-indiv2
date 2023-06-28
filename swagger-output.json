@@ -5,10 +5,10 @@
     "description": "This API is a collection of books",
     "version": "1.0.0"
   },
-  "host": "lesson05-indiv.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/api-docs": {
@@ -18,53 +18,86 @@
         "responses": {}
       }
     },
-    "/books/": {
+    "/Allstudents": {
       "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "description": "sadasdasd",
+        "summary": "get all students",
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
-      },
-      "post": {
+      }
+    },
+    "/{id}": {
+      "get": {
         "description": "",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "titleBook": {
-                  "example": "any"
-                },
-                "author": {
-                  "example": "any"
-                },
-                "genre": {
-                  "example": "any"
-                },
-                "pages": {
-                  "example": "any"
-                },
-                "image": {
-                  "example": "any"
-                },
-                "publisher": {
-                  "example": "any"
-                },
-                "yearEdition": {
-                  "example": "any"
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "update Students",
+        "summary": "update the students",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "properties":{
+            "id": "integer"
+            }
+  
+              
+              
+            },
+            {
+              "name": "schema",
+              "in": "body",
+              "required": true,
+              "type": "string",
+              "schema":{
+                "type": "array",
+                "items":{
+                  "$ref":"#/definitions/Student"
                 }
               }
             }
-          }
+              
+          
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/newStudent": {
+      "post": {
+        "description": "",
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
@@ -75,12 +108,23 @@
         }
       }
     },
-    "/books/{id}": {
+    "/newBook": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/looking/{id}": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
@@ -92,9 +136,28 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
-      },
+      }
+    },
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/changes/{id}": {
       "put": {
         "description": "",
         "parameters": [
@@ -103,66 +166,59 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "titleBook": {
-                  "example": "any"
-                },
-                "author": {
-                  "example": "any"
-                },
-                "genre": {
-                  "example": "any"
-                },
-                "pages": {
-                  "example": "any"
-                },
-                "image": {
-                  "example": "any"
-                },
-                "publisher": {
-                  "example": "any"
-                },
-                "yearEdition": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     }
+  },
+  "definitions":{
+    "Student": {
+      "type": "object",
+      "required":[
+        "firstName",
+        "lastName", 
+        "email",
+        "phoneNumber",
+        "favoriteBooks",
+        "birthDate",
+        "location"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+          
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "favoriteBooks": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        }
+      }
+    }
+
+    }
   }
-}
+
+
+

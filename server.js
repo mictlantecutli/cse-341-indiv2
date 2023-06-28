@@ -1,20 +1,23 @@
-const bookMethods = require("./routes/index")
+//const bookMethods = require("./routes/index")
 const express = require('express');
 const app = express();
 const parser = require('body-parser');
 //const MongoClient = require(mongodb).MongoClient;
-const mongodb = require('./db/connect');
+//const mongodb = require('./db/connect');
 var cors = require('cors');
 
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors());
-
-//const port = 8000;
-
 app.use(parser.json());
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger-output.json');
+const port = 8080;
+
+
+
+//const swaggerUi = require('swagger-ui-express');
+//const swaggerDocument = require('./swagger-output.json');
 
 
 app.use((req, res, next)=>{
@@ -23,19 +26,22 @@ app.use((req, res, next)=>{
   
 })
 
-  app.use('/', bookMethods);
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+app.use('/', require('./routes'));
 
-
-
-mongodb.initDb((err
-  )=>{
-  if (err){
-    console.log(err);
-  }else{
-    app.listen(process.env.PORT);
-    console.log('Web Server is listening at port '+ (process.env.PORT));
-    
-  }
-});
+const db = require('./models');
+db.mongoose
+  .connect(db.url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`DB Connected and server running on ${port}.`);
+    });
+  })
+  .catch((err) => {
+    console.log('Cannot connect to the database!', err);
+    process.exit();
+  });
+  
