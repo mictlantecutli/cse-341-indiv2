@@ -64,21 +64,16 @@
             "type": "string",
             "properties":{
             "id": "integer"
-            }
-  
-              
-              
+            }   
             },
             {
-              "name": "schema",
+              "name": "body",
               "in": "body",
-              "required": true,
-              "type": "string",
               "schema":{
-                "type": "array",
-                "items":{
-                  "$ref":"#/definitions/Student"
-                }
+                "type": "object",
+              
+                "$ref":"#/definitions/Student"
+                
               }
             }
               
