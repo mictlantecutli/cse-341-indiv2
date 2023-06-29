@@ -11,4 +11,9 @@ router.get('/', booksController.getAllBooks);
 
 router.put('/changes/:id', booksController.upBook);
 
+router.delete('/deleteBook/:id', booksController.delete);
+
+
+
+
 module.exports = router;

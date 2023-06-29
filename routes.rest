@@ -35,17 +35,18 @@ content-type: application/json
 ###GET METHOD ALL THE STUDENTS
 GET http://localhost:8080/Allstudents 
 
-
-
-
-
 ##############################
 ###GET STUDENTS BY ID########
 GET http://localhost:8080/649befbe840d44355155586d 
+###
+
+###DELETE STUDENTS  
+DELETE  http://localhost:8080/deleteStudent/649da0845cd522d8449f6a60
+#####
 
 ###########################################
 ###########ROUTES FOR BOOK DATABASE######
-#########################################
+###############ON LOCAL HOIST#################
 POST http://localhost:8080/newBook
 content-type: application/json
 
@@ -74,6 +75,10 @@ GET http://localhost:8080/
 ###
 ###GET books BY ID 
 GET http://localhost:8080/looking/649c8ee81a5a121b8817e77e
+#####
+
+###GET books BY ID 
+DELETE  http://localhost:8080/deleteBook/649d9c9b5f3fc8effeae8984
 #####
 
 ////////////////////////////////////////////////////

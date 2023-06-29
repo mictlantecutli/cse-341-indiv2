@@ -117,6 +117,29 @@
         }
       }
     },
+    "/deleteStudent/{id}": {
+      "post": {
+        "summary": "delete one student",
+        "description": "delete student by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }   
+
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/newBook": {
       "post": {
         "description": "is a method to add a new book",
@@ -210,6 +233,29 @@
           },
           "400": {
             "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/deleteBook/{id}": {
+      "post": {
+        "summary": "delete one book",
+        "description": "delete book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }   
+
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

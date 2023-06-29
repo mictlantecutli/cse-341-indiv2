@@ -75,6 +75,21 @@ exports.upStudent = ('/:id', async (req, res, next) => {
   }
 });
 
+
+////////////////////
+///DELETE STUDENT/////
+/////////////////////
+exports.delete = ('/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const deleteStu = await Student.findByIdAndDelete(id);
+    res.status(200).json(deleteStu);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
+});
+
    
   
 

@@ -87,3 +87,17 @@ exports.upBook = ('/:id', async (req, res, next) => {
     next(error);
   }
 });
+
+////////////////////
+///DELETE BOOK/////
+/////////////////////
+exports.delete = ('/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const deleteB = await booksData.findByIdAndDelete(id);
+    res.status(200).json(deleteB);
+  } catch (error) {
+    res.status(400);
+    next(error);
+  }
+});

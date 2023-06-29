@@ -5,6 +5,10 @@ const parser = require('body-parser');
 //const MongoClient = require(mongodb).MongoClient;
 //const mongodb = require('./db/connect');
 var cors = require('cors');
+//framework for authentication
+const passport = require('passport');
+const session = require('express-session');
+const githubStrategy = require('passport-github2').Strategy
 
 
 app.use(express.urlencoded({ extended: true }));
