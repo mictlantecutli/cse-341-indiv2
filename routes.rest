@@ -1,92 +1,4 @@
 
-
-
-//local POST, PUT, DELETE
-###
-POST http://localhost:8081/books 
-Content-Type: application/json
-
-{
-  "titleBook": "The Lord of the Rings Tarot Deck and Guide",
-  "author": "Auger, Emily E.",
-  "genre": "Reviews",
-  "pages": "78",
-  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_Lrings.jpg",
-  "publisher": "Mythopoeic Society",
-  "yearEdition": "2023"
-}
-
-//HERE I DID ONE CHANGES IN THE NUMBER OF PAGES
-###
-PUT http://localhost:8081/books/64920f44a449213855eedd3c
-Content-Type: application/json
-
-{
-  "titleBook": "*********",
-  "author": "***************",
-  "genre": "*****",
-  "pages": "****",
-  "image": "********",
-  "publisher": "*******",
-  "yearEdition": "*******"
-}
-###
-
-DELETE http://localhost:8081/books/64920f44a449213855eedd3c
-
-###
-
-
-
-/////////////requests in RENDER DEPLOY//////////////////
-###
-GET https://lesson05-indiv.onrender.com/books
-
-###
-
-GET https://lesson05-indiv.onrender.com/books/649206adbd9ba34a898507b7
-
-###
-
-
-###
-POST https://lesson05-indiv.onrender.com/books/64939cccf8df9ae256bc3412
-Content-Type: application/json
-
-{
-  "titleBook": "The Lord of the Rings Tarot Deck and Guide",
-  "author": "Auger, Emily E.",
-  "genre": "Reviews",
-  "pages": "78",
-  "image": "https://github.com/mictlantecutli/cse-341-indiv2/blob/lesson5_indiv/imagesBooks/book_Lrings.jpg",
-  "publisher": "Mythopoeic Society",
-  "yearEdition": "2023"
-}
-###
-
-
-PUT  https://lesson3-indiv.onrender.com/contacts/6483ba02bc5fa7ff5b508f99 
-Content-Type: application/json
-
-{
-  "titleBook": "*********",
-  "author": "***************",
-  "genre": "*****",
-  "pages": "****",
-  "image": "********",
-  "publisher": "*******",
-  "yearEdition": "*******"
-}
-
-###
-DELETE https://lesson05-indiv.onrender.com/books/64939a03aebdb99489ae1396 
-###
-
-///////////////ASSIGNMENT 05 PERSONAL API.DOCS for BOOKS/////////////////////////////
-###
-
-https://lesson05-indiv.onrender.com/api-docs/
-
 /////////////////ASSIGNMENT 05 AGAIN/////////////////
 ###POST METHOD STUDENT###############
 POST http://localhost:8080/newStudent 
@@ -125,11 +37,7 @@ GET http://localhost:8080/Allstudents
 
 
 
-################################
-###DELETE STUDENTS BY ID########
-################################
 
-//////////////
 
 ##############################
 ###GET STUDENTS BY ID########
@@ -167,6 +75,88 @@ GET http://localhost:8080/
 ###GET books BY ID 
 GET http://localhost:8080/looking/649c8ee81a5a121b8817e77e
 #####
+
+////////////////////////////////////////////////////
+
+
+/////////////////ASSIGNMENT 05 AGAIN BUT PN RENDER [HTTPS]/////////////////
+###POST METHOD STUDENT###############
+POST https://lesson05-indiv.onrender.com/newStudent 
+content-type: application/json
+
+{
+  "firstName": "LESSON05",
+  "lastName": "LESSON05", 
+  "email": "LESSON05",
+  "phoneNumber": "LESSON05", 
+  "favoriteBooks": "LESSON05",
+  "birthDate": "08/11/1986",
+  "location": "LESSON05" 
+}
+
+
+
+############################
+####UPDATE STUDENT################
+PUT https://lesson05-indiv.onrender.com/649bca8ac88e47791fb241f7 
+content-type: application/json
+
+{
+  "firstName": "LESSON05NEW",
+  "lastName": "LESSON05NEW", 
+  "email": "oisd@s*****",
+  "phoneNumber": "7772343242", 
+  "favoriteBooks": "changes2",
+  "birthDate": "08/11/1986",
+  "location": "changes2" 
+}
+
+###
+###GET METHOD ALL THE STUDENTS
+GET https://lesson05-indiv.onrender.com/Allstudents 
+
+
+
+
+
+##############################
+###GET STUDENTS BY ID########
+GET https://lesson05-indiv.onrender.com/649befbe840d44355155586d 
+
+###########################################
+###########ROUTES FOR BOOK DATABASE######
+#########################################
+POST https://lesson05-indiv.onrender.com/newBook
+content-type: application/json
+
+{
+  "titleBook": "******",
+  "author": "******",
+  "genre": "*****"
+}
+
+#####UPDATE METHOD#####
+#########################
+PUT https://lesson05-indiv.onrender.com/changes/649c9030bba38628c0bd7eee
+content-type: application/json
+
+{
+  "titleBook": "update",
+  "author": "update",
+  "genre": "update"
+}
+######
+
+###GET ALL THE FAVORITE BOOKS
+GET https://lesson05-indiv.onrender.com/
+###
+
+###
+###GET books BY ID 
+GET https://lesson05-indiv.onrender.com/looking/649c8ee81a5a121b8817e77e
+#####
+
+
 
 
 
