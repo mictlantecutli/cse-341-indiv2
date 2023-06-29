@@ -50,6 +50,18 @@ app.use(cors({origin: '*'}));
 
 app.use('/', require('./routes'));
 
+//using passport in github
+passport.use(new githubStrategy({
+  clientID: process.env.GITHUB_CLIENT_ID,
+  clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  callbackURL: process.env.CALLBACK_URL
+},
+function(accessToken, refreshToken, profile, done){
+  return done(null, profile);
+}
+));
+
+
 const db = require('./models');
 db.mongoose
   .connect(db.url, {
