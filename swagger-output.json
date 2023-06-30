@@ -5,10 +5,10 @@
     "description": "This API is a collection of books",
     "version": "1.0.0"
   },
-  "host": "lesson05-indiv.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/api-docs": {
@@ -33,7 +33,7 @@
         }
       }
     },
-    "/{id}": {
+    "/singleStudent/{id}": {
       "get": {
         "summary": "get student by ID",
         "description": "",
@@ -190,7 +190,7 @@
         }
       }
     },
-    "/": {
+    "/books/all": {
       "get": {
         "summary": "Get all books",
         "description": "Get all the books in the data base",

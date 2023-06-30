@@ -18,17 +18,17 @@ content-type: application/json
 
 ############################
 ####UPDATE STUDENT################
-PUT http://localhost:8080/649c8fa1bba38628c0bd7ee9 
+PUT http://localhost:8080/singleStudent/649c8fa1bba38628c0bd7ee9 
 content-type: application/json
 
 {
-  "firstName": "changes2",
-  "lastName": "changes2", 
+  "firstName": "changes10",
+  "lastName": "changes10", 
   "email": "oisd@s*****",
   "phoneNumber": "7772343242", 
-  "favoriteBooks": "changes2",
+  "favoriteBooks": "changes10",
   "birthDate": "08/11/1986",
-  "location": "changes2" 
+  "location": "changes10" 
 }
 
 ###
@@ -37,7 +37,7 @@ GET http://localhost:8080/Allstudents
 
 ##############################
 ###GET STUDENTS BY ID########
-GET http://localhost:8080/649befbe840d44355155586d 
+GET http://localhost:8080/singleStudent/649befbe840d44355155586d 
 ###
 
 ###DELETE STUDENTS  
@@ -69,7 +69,7 @@ content-type: application/json
 ######
 
 ###GET ALL THE FAVORITE BOOKS
-GET http://localhost:8080/
+GET http://localhost:8080/books/all
 ###
 
 ###

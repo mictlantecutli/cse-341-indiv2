@@ -38,7 +38,7 @@ exports.newBook = (req, res) => {
 
 exports.getAllBooks = async (req, res, next) => {
   try {
-    const books = await booksData.find({});
+    const books = await booksData.find();
     res.status(200).json(books);
   } catch (error) {
     res.status(400);

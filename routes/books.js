@@ -3,17 +3,17 @@ const router = express.Router();
 
 const booksController = require('../controllers/favBooks.js');
 
-const { isAuthenticate } = require('../middleware/authenticate.js');
+const { isAuthenticated } = require('../middleware/authenticate.js');
 
-router.post('/newBook', isAuthenticate, booksController.newBook);
+router.post('/newBook', isAuthenticated, booksController.newBook);
 
 router.get('/looking/:id', booksController.getBookById);
 
-router.get('/', booksController.getAllBooks);
+router.get('/books/all', booksController.getAllBooks);
 
-router.put('/changes/:id', isAuthenticate, booksController.upBook);
+router.put('/changes/:id', isAuthenticated, booksController.upBook);
 
-router.delete('/deleteBook/:id', isAuthenticate, booksController.delete);
+router.delete('/deleteBook/:id', isAuthenticated, booksController.delete);
 
 
 

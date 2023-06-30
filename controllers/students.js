@@ -1,5 +1,5 @@
 const db = require('../models');
-const ObjectId = require('mongodb').ObjectId;
+//const ObjectId = require('mongodb').ObjectId;
 const Student = db.students;
 
 
@@ -49,8 +49,9 @@ exports.getAll = (req, res) => {
 
 ///GET STUDENT BY ID
 exports.getStudentById = (req, res) => {
-  const studentID = new ObjectId(req.params.id);
-  Student.find({_id:studentID})
+  const { id } = req.params;
+  //const studentID = new ObjectId(req.params.id);
+  Student.findById(id)
     .then((data) => {
       res.send(data);
     })
