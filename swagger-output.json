@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API Books",
-    "description": "This API is a collection of books",
+    "title": "My API books-students",
+    "description": "This API is a collection of books and students",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
