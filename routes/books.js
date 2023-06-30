@@ -9,9 +9,9 @@ router.post('/newBook', isAuthenticated, booksController.newBook);
 
 router.get('/looking/:id', booksController.getBookById);
 
-router.get('/books/all', booksController.getAllBooks);
+router.get('/allBooks', booksController.getAllBooks);
 
-router.put('/changes/:id', isAuthenticated, booksController.upBook);
+router.put('/upBook/:id', isAuthenticated, booksController.upBook);
 
 router.delete('/deleteBook/:id', isAuthenticated, booksController.delete);
 

@@ -190,7 +190,7 @@
         }
       }
     },
-    "/books/all": {
+    "/allBooks": {
       "get": {
         "summary": "Get all books",
         "description": "Get all the books in the data base",
@@ -205,7 +205,7 @@
         }
       }
     },
-    "/changes/{id}": {
+    "/upBook/{id}": {
       "put": {
         "summary": "Update books",
         "description": "Update books by ID",
