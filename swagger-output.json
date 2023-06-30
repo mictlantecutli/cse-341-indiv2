@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "title": "My API books-students",
-    "description": "This API is a collection of books and students",
+    "description": "This lesson 07 is about Authentication",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "lesson07-indiv.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {

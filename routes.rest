@@ -144,7 +144,7 @@ content-type: application/json
 
 #####UPDATE METHOD#####
 #########################
-PUT https://lesson07-indiv.onrender.com/changes/649c9030bba38628c0bd7eee
+PUT https://lesson07-indiv.onrender.com/upBook/649c9030bba38628c0bd7eee
 content-type: application/json
 
 {
