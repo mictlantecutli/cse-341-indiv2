@@ -10,6 +10,14 @@ const passport = require('passport');
 const session = require('express-session');
 const githubStrategy = require('passport-github2').Strategy
 
+const graphHTTP = require('express-graphql')
+
+const data = require('./models');
+
+
+
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -23,6 +31,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 }))
+
+
+
+
 
 
 //setting the passport object
@@ -49,6 +61,22 @@ app.use(cors({methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}));
 app.use(cors({origin: '*'}));
 
 app.use('/', require('./routes'));
+
+
+schema = {}
+
+
+
+//app.use(parser.urlencoded({ extended: true }));
+//app.use(parser.json());
+
+app.use('/graphql', graphHTTP.graphqlHTTP(req => {
+  return ({
+  schema,
+  graphiql: true,
+  })
+}));
+
 
 //using passport in github
 passport.use(new githubStrategy({
