@@ -12,7 +12,11 @@ const githubStrategy = require('passport-github2').Strategy
 
 const graphHTTP = require('express-graphql')
 
-const data = require('./models');
+const schema = require('./graph/schema')
+
+
+
+
 
 
 
@@ -63,19 +67,20 @@ app.use(cors({origin: '*'}));
 app.use('/', require('./routes'));
 
 
-schema = {}
 
 
+//schema = {}
 
 //app.use(parser.urlencoded({ extended: true }));
 //app.use(parser.json());
 
+/*
 app.use('/graphql', graphHTTP.graphqlHTTP(req => {
   return ({
-  schema,
+  schema: schema,
   graphiql: true,
   })
-}));
+}));*/
 
 
 //using passport in github
