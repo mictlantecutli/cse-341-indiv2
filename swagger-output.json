@@ -118,7 +118,7 @@
       }
     },
     "/deleteStudent/{id}": {
-      "post": {
+      "delete": {
         "summary": "delete one student",
         "description": "delete student by ID",
         "parameters": [
@@ -238,7 +238,7 @@
       }
     },
     "/deleteBook/{id}": {
-      "post": {
+      "delete": {
         "summary": "delete one book",
         "description": "delete book by ID",
         "parameters": [
