@@ -12,13 +12,8 @@ const githubStrategy = require('passport-github2').Strategy
 
 const graphHTTP = require('express-graphql')
 
-const schema = require('./graph/schema')
-
-
-
-
-
-
+//const schema = require('./graph/schema');
+const resolvers = require('./graph/resolvers');
 
 
 
@@ -74,13 +69,14 @@ app.use('/', require('./routes'));
 //app.use(parser.urlencoded({ extended: true }));
 //app.use(parser.json());
 
-/*
+
 app.use('/graphql', graphHTTP.graphqlHTTP(req => {
   return ({
-  schema: schema,
+  schema: resolvers,
+  //schema: schema,
   graphiql: true,
   })
-}));*/
+}));
 
 
 //using passport in github
@@ -109,7 +105,7 @@ app.get('/github/callback', passport.authenticate('github', {
     req.session.user = req.user;
     res.redirect('/');
   });
-
+//////////////////////////////
 const db = require('./models');
 db.mongoose
   .connect(db.url, {
@@ -125,4 +121,5 @@ db.mongoose
     console.log('Cannot connect to the database!', err);
     process.exit();
   });
+  //////////////////
   

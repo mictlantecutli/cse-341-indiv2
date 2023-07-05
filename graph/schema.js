@@ -1,24 +1,26 @@
 /*
-//import { makeExecutableSchema } from 'graphql-tools';
-const {makeExecutableSchema} = require('graphql-tools')
-const {resolvers} = require('./resolvers')
-//import {resolvers} from './resolvers';
+// Nos traemos la funciónn que utilizaremos de la dependencia de graphql
+const { buildSchema } = require("graphql");
 
+// Utilizamos este método para crear nuestros esquemas de la siguiente forma
+module.exports = buildSchema(`
 
-const defs = `
-
-  type books{
-    title: String
+  type Book {
+    _id: ID!
+    titleBook: String!
+    author: String!
+    genre: String!
   }
 
-  `;
 
+  type Query {
+    books:[Book!]
+  }
 
+ 
 
-
-makeExecutableSchema({
-
-  typeDefs: defs,
-  resolvers: resolvers
-
-})*/
+  schema {
+    query: Query
+    
+  }
+`);*/
